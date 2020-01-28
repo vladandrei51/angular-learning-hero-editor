@@ -15,14 +15,16 @@ export class HeroesComponent implements OnInit {
     name: 'Windstorm'
   };
 
-  heroList: Hero;
+  heroList: Hero[];
 
   selectedHero: Hero;
   
   constructor(private service: HeroService) { }
 
   ngOnInit() {
-    this.heroList = this.service.getHeroes();
+    this.service.getHeroes().subscribe(
+      list => this.heroList = list
+    );
   }
 
   onSelect(hero: Hero): void{
