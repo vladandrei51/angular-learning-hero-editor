@@ -14,7 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, HeroesComponent, HeroDetailComponent, MessagesComponent ],
+  declarations: [ AppComponent, HelloComponent, HeroesComponent, HeroDetailComponent, MessagesComponent, DashboardComponent ],
   bootstrap:    [ AppComponent ],
   providers: [HeroService, MessageService]
 })
